@@ -7,17 +7,17 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item my-2">
-                <a class="nav-link" href="">Dashboard <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="">Dashboard</a>
             </li>
 
             <li class="nav-item my-2">
                 <a class="nav-link" href="{{route('alta.mascotas')}}">Alta mascotas</a>
             </li>
             <li class="nav-item my-2">
-                <a class="nav-link" href="">Pedir cita</a>
+                <a class="nav-link" href="{{route('mascotas.index')}}">Pedir cita</a>
             </li>
             <li class="nav-item my-2">
-                <a class="nav-link" href="">Gestionar citas</a>
+                <a class="nav-link" href="{{route('citas.usuario')}}">Gestionar citas</a>
             </li>
             <li class="nav-item my-2">
                 <form method="post" action="{{route('logout')}}">

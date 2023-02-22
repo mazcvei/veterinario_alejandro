@@ -19,7 +19,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-
 Route::middleware('auth')->group(function () {
 
     Route::get('/dashboard', function () {
@@ -27,11 +26,13 @@ Route::middleware('auth')->group(function () {
     })->name('dashboard');
 
     Route::get('/alta-mascotas',[MascotasController::class,'index'])->name('alta.mascotas');
-    Route::post('/alta-mascotas',[MascotasController::class,'store'])->name('masctoas.store');
+    Route::post('/alta-mascotas',[MascotasController::class,'store'])->name('mascotas.store');
+
     Route::get('/cita-mascotas',[CitasController::class,'index'])->name('mascotas.index');
     Route::post('/cita-mascotas',[CitasController::class,'store'])->name('citas.store');
+
     Route::get('/citas-usuario',[CitasController::class,'show'])->name('citas.usuario');
-    Route::post('/eliminar-cita',[CitasController::class,'destroy'])->name('cita.drestoy');
+    Route::get('/eliminar-cita/{id}',[CitasController::class,'destroy'])->name('cita.drestoy');
 
 });
 
